@@ -12,7 +12,6 @@ bin-release/
 *.air
 *.ipa
 *.apk
-*.env
 *.ipynb
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
