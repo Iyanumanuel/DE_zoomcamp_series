@@ -6,19 +6,15 @@ import argparse
 import os
 from decouple import config
 
-user = config('user', default='')
-password = config('password', default='')
-host = config('host', default='')
-port = config('port', default='')
-db = config('db', default='')
+db_conn = config('conn', default='')
 table_name = config('table_name', default='')
 url = config('url', default='')
-csv_name = 'output.csv'
+# csv_name = 'output.csv'
 
 
-# os.system(f"wget {url}")
+# os.system(f"wget {url} -o {csv_name}")
 
-engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
+engine = create_engine(db_conn)
 
 df_iter = pd.read_csv(url, iterator=True, chunksize= 100000)
 
