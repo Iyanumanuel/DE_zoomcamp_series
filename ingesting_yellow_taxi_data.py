@@ -3,7 +3,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 from time import time
 import argparse
-import os
+#import os
 from decouple import config
 
 db_conn = config('conn', default='')
