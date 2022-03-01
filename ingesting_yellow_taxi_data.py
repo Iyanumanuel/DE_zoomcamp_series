@@ -11,7 +11,6 @@ table_name = config('table_name', default='')
 url = config('url', default='')
 # csv_name = 'output.csv'
 
-
 # os.system(f"wget {url} -o {csv_name}")
 
 engine = create_engine(db_conn)
