@@ -5,6 +5,8 @@ from time import time
 import argparse
 #import os
 from decouple import config
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 db_conn = config('conn', default='')
 table_name = config('table_name', default='')
